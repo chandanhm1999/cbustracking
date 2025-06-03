@@ -39,13 +39,37 @@ const MapView = () => {
   }, []);
 
   // Custom bus icon using react-icons
+  // const busIcon = new L.DivIcon({
+  //   html: ReactDOMServer.renderToString(
+  //     <FaBus style={{ color: "#572649", fontSize: "24px" }} />
+  //   ),
+  //   className: "",
+  //   iconSize: [24, 24],
+  //   iconAnchor: [12, 12],
+  // });
+
   const busIcon = new L.DivIcon({
     html: ReactDOMServer.renderToString(
-      <FaBus style={{ color: "#572649", fontSize: "24px" }} />
+      <div
+        style={{
+          background: "linear-gradient(135deg, #572649, #8b3a6f)", // Dark to lighter gradient
+          borderRadius: "10%",
+          padding: "2px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "30px",
+          height: "30px",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // soft shadow
+          border: "1px solid white", // neat border
+        }}
+      >
+        <FaBus style={{ color: "white", fontSize: "20px" }} />
+      </div>
     ),
     className: "",
-    iconSize: [24, 24],
-    iconAnchor: [12, 12],
+    iconSize: [40, 40],
+    iconAnchor: [20, 20],
   });
 
   return (
